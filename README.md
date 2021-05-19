@@ -16,3 +16,9 @@ def my_gret_method
     puts "here it is"
 end
 ```
+
+### Generate code via Controller generator
+
+```ruby
+rails g controller CONTROLLER_NAME METHOD_NAME METHOD_NAME METHOD_NAME
+```
