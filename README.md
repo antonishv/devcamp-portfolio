@@ -20,5 +20,10 @@ end
 ### Generate code via Controller generator
 
 ```ruby
-rails g controller CONTROLLER_NAME METHOD_NAME METHOD_NAME METHOD_NAME
+    rails g controller CONTROLLER_NAME METHOD_NAME METHOD_NAME METHOD_NAME
+```
+
+### Get specific routes
+```ruby
+    rake routes | grep portfolio
 ```
