@@ -1,5 +1,5 @@
 class PortfoliosController < ApplicationController
-    before_action :set_portfolio_item, only: %i[ edit update show ]
+    before_action :set_portfolio_item, only: %i[ edit update show destroy ]
 
     def index
         @portfolio_items = Portfolio.all
@@ -31,6 +31,11 @@ class PortfoliosController < ApplicationController
     end
 
     def show
+    end
+
+    def destroy
+        @portfolio_item.destroy
+        redirect_to portfolios_path, notice: 'The record was removed'
     end
 
     private
