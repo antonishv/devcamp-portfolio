@@ -27,3 +27,12 @@ end
 ```ruby
     rake routes | grep portfolio
 ```
+
+### Nested routes
+```ruby
+    namespace :admin do
+        # move controller to admin directory
+        # move view to admin directory
+        get 'dashboard/main'
+    end
+```
