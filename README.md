@@ -36,3 +36,42 @@ end
         get 'dashboard/main'
     end
 ```
+
+### Add relation
+```ruby
+    rails g migration AddTopicReferenceToBlogs topic:references
+```
+
+### Access relation
+```ruby
+    t = Topic.first
+    t.blogs
+
+    Blog.last.topic
+```
+
+### Cheatseet references
+
+> https://gist.github.com/jessieay/3131622
+> https://cheatography.com/dwapi/cheat-sheets/rails-5-activerecord-queries/
+
+- Concern -> helper with data related to share accross the model
+- Lib -> helper with no data related
+
+- method parameter follow by " : " means we should include the parameter name when using the method 
+
+```ruby
+    # set default value in model
+    after_initialize :set_defaults
+
+    def set_defaults
+        self.main_image ||= "http://placehold.it/600x400"
+        self.thumb_image ||= "http://placehold.it/350x200"
+    end
+
+
+    # Nested atrributes
+    accepts_nested_attributes_for :technologies, reject_if: lambda { |attrs| attrs['name'].blank? }
+    
+    Portfolio.create!(title: "Web app", subtitle: "asdasd", body: "asdasdasd", technologies_attributes: [{name: "Ruby"}, {name: "Rails"}, {name: "Angular"}, {name: "Ionic"}])
+```
