@@ -36,3 +36,16 @@ end
         get 'dashboard/main'
     end
 ```
+
+### Add relation
+```ruby
+    rails g migration AddTopicReferenceToBlogs topic:references
+```
+
+### Access relation
+```ruby
+    t = Topic.first
+    t.blogs
+
+    Blog.last.topic
+```
