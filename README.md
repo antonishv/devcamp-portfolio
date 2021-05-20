@@ -54,3 +54,13 @@ end
 
 > https://gist.github.com/jessieay/3131622
 > https://cheatography.com/dwapi/cheat-sheets/rails-5-activerecord-queries/
+
+```ruby
+    # set default value in model
+    after_initialize :set_defaults
+
+    def set_defaults
+        self.main_image ||= "http://placehold.it/600x400"
+        self.thumb_image ||= "http://placehold.it/350x200"
+    end
+```
