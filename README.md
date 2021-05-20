@@ -75,3 +75,40 @@ end
     
     Portfolio.create!(title: "Web app", subtitle: "asdasd", body: "asdasdasd", technologies_attributes: [{name: "Ruby"}, {name: "Rails"}, {name: "Angular"}, {name: "Ionic"}])
 ```
+
+> Active Record Query
+
+- https://guides.rubyonrails.org/active_record_querying.html
+
+```ruby
+    find_by_field #only get 1 data
+    vader = Author.find_by_name("Vader")
+    vader.books.sum(:sales) #:sales is the field in db
+    Book.average(:sales).to_f
+    Book.maximum(:sales)
+    Book.order('sales DESC')
+    Book.order('sales DESC').first
+    Book.order('sales DESC').first.author.name
+
+    # Has Many Through
+    # Case => Author would like to know all the genre, Genre would like to know all the Author
+
+    # Author Model
+    has_many :genres, through: :books
+
+    # Genre Model
+    has_many :authors, through: :books
+
+    Author.first.genres
+    Genre.first.authors
+
+    # return an array of name
+    Genre.pluck(:name)
+    Author.pluck(:name)
+    Book.pluck(:title)
+    vader_new.books.pluck(:title)
+    Author.ids # return all of authors id
+
+    # Solve N+1 problem / eager loading
+    @books = Book.includes(:author, :genre)
+```
