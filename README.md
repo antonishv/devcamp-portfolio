@@ -49,3 +49,8 @@ end
 
     Blog.last.topic
 ```
+
+### Cheatseet references
+
+> https://gist.github.com/jessieay/3131622
+> https://cheatography.com/dwapi/cheat-sheets/rails-5-activerecord-queries/
