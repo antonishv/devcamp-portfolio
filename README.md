@@ -68,4 +68,10 @@ end
         self.main_image ||= "http://placehold.it/600x400"
         self.thumb_image ||= "http://placehold.it/350x200"
     end
+
+
+    # Nested atrributes
+    accepts_nested_attributes_for :technologies, reject_if: lambda { |attrs| attrs['name'].blank? }
+    
+    Portfolio.create!(title: "Web app", subtitle: "asdasd", body: "asdasdasd", technologies_attributes: [{name: "Ruby"}, {name: "Rails"}, {name: "Angular"}, {name: "Ionic"}])
 ```
