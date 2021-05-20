@@ -55,6 +55,11 @@ end
 > https://gist.github.com/jessieay/3131622
 > https://cheatography.com/dwapi/cheat-sheets/rails-5-activerecord-queries/
 
+- Concern -> helper with data related to share accross the model
+- Lib -> helper with no data related
+
+- method parameter follow by " : " means we should include the parameter name when using the method 
+
 ```ruby
     # set default value in model
     after_initialize :set_defaults
