@@ -112,3 +112,7 @@ end
     # Solve N+1 problem / eager loading
     @books = Book.includes(:author, :genre)
 ```
+
+### View Helper
+
+- Use View Helper if has conditional otherwise use Partial (Majority HTML Code)
