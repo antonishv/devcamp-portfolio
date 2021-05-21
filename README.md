@@ -116,3 +116,7 @@ end
 ### View Helper
 
 - Use View Helper if has conditional otherwise use Partial (Majority HTML Code)
+- distance_of_time_in_words(blog.created_at, Time.now) = ... seconds ago
+- number_to_phone "5555555555"
+- https://guides.rubyonrails.org/action_view_helpers.html
+- https://guides.rubyonrails.org/form_helpers.html
