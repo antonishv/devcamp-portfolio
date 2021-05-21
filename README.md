@@ -40,6 +40,8 @@ end
 ### Add relation
 ```ruby
     rails g migration AddTopicReferenceToBlogs topic:references
+    # it will add topic_id to blogs table
+    # topic has many blog, blog belongs to topic
 ```
 
 ### Access relation
@@ -120,3 +122,12 @@ end
 - number_to_phone "5555555555"
 - https://guides.rubyonrails.org/action_view_helpers.html
 - https://guides.rubyonrails.org/form_helpers.html
+- render partial: @blogs, spacer_template: "blog_ruler" => example blog_ruler contain <hr> then it will render it every loop (no render on last)
+
+```ruby
+    <%= cache do %>
+        <div>
+            <%= render partial: @blogs, spacer_template: 'blog_ruler' %>
+        </div>
+    <% end %>
+```
