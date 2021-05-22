@@ -131,3 +131,8 @@ end
         </div>
     <% end %>
 ```
+
+### Debugging
+
+- use pry-debug
+- put binding.pry , next for next step, j for up, k for down, q for back to normal
