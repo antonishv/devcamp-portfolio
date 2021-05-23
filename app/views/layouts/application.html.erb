@@ -13,15 +13,17 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="d-flex h-100 text-center text-white bg-dark">
+  <body class="d-flex h-screen text-center text-white bg-dark">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
       <%= render "shared/application_nav" %>
       
-      <%= login_helper %>
-
       <%= yield %>
 
       <%= source_helper("application") %>
+
+      <footer class="mt-auto text-white-50">
+        <p><a href="https://twitter.com/mdo" class="text-white">Antoni</a>.</p>
+      </footer>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
