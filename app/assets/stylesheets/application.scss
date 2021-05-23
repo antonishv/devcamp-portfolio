@@ -66,10 +66,19 @@ body {
 }
 }
 
-.footer {
-  position: relative;
-  margin-top: -150px; /* negative value of footer height */
-  height: 150px;
-  clear:both;
-  padding-top:20px;
-} 
+/*
+ * Custom Styles
+*/
+
+.card {
+  text-align: left;
+}
+
+.card-body {
+  color: black;
+}
+
+.auth-links a {
+  color: black;
+  text-decoration: none;
+}
